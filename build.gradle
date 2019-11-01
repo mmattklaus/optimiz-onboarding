@@ -1,7 +1,8 @@
+
 plugins {
     id 'org.springframework.boot' version '2.2.0.RELEASE'
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-    id 'java'
+    id 'groovy'
 }
 
 group = 'claims.optimiz.onboarding'
@@ -26,6 +27,9 @@ dependencies {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     compile("org.springframework.boot:spring-boot-starter-data-rest")
+    // https://mvnrepository.com/artifact/org.spockframework/spock-core
+    testCompile group: 'org.spockframework', name: 'spock-core', version: '1.3-groovy-2.5'
+
 }
 
 test {
